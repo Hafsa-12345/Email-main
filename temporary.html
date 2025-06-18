@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!DOCTYPE html>
+	<html lang="hi">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>आभा पत्रिका</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+
+
+			body {
+				background-image: url('body pattern.png');
+				margin: 0;
+				font-family: Arial, sans-serif;
+				padding: 20px;
+			}
+
+			.main-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+			}
+
+
+			/* Two-column layout */
+			.article-wrapper {
+				width: calc(50% - 10px);
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+			}
+
+			.article-card {
+				width: calc(50% - 10px);
+				display: flex;
+				gap: 15px;
+				align-items: flex-start;
+				background: #fff;
+				border-bottom: 1px solid #D9D5D9;
+				border-radius: 4px;
+				padding: 10px;
+				transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+			}
+
+			.article-card:hover {
+				background-color: #F4C2C2;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+				cursor: pointer;
+			}
+
+			.card-title {
+				font-weight: bold;
+				font-size: 16px;
+				margin-bottom: 6px;
+				/* Less space below title */
+				color: #222;
+			}
+
+
+
+
+			.article-card img {
+				width: 120px;
+				height: 90px;
+				object-fit: cover;
+				border-radius: 6px;
+				flex-shrink: 0;
+			}
+
+			.card-text {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+			}
+
+			.top-heading {
+				font-weight: bold;
+				font-size: 14px;
+				margin-bottom: 4px;
+
+
+			}
+
+
+			.article-box {
+				display: flex;
+				width: 400px;
+				height: 160px;
+				/* Fixed height */
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				padding: 10px;
+				margin-bottom: 15px;
+				background-color: #fff;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+			}
+
+
+			.card-desc {
+				font-size: 14px;
+				color: #555;
+			}
+
+
+			.image-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+			}
+
+
+			.image-container {
+				flex: 1 1 calc(50% - 10px);
+				/* 2 images per row on mobile */
+				max-width: calc(50% - 10px);
+			}
+
+
+			@media screen and (max-width: 768px) {
+
+
+
+				.article-card {
+					flex-direction: column;
+					/* Stack image on top in small screens */
+					align-items: flex-start;
+				}
+
+				.article-card img {
+					width: 100%;
+					height: auto;
+				}
+
+
+
+				.full-width {
+					width: 100% !important;
+				}
+
+				.latest-articles {
+					background-color: #e5e7e9;
+					/* Change this to any color you like */
+					padding: 20px;
+					border-radius: 10px;
+					/* Optional: rounded corners */
+				}
+
+
+
+				.button a {
+					display: inline-block !important;
+					margin: 0 auto;
+				}
+
+				.header-box {
+					width: 100%;
+					background-color: white;
+					border-bottom: 4px solid black;
+					padding: 10px 20px;
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					flex-direction: column;
+				}
+
+				.img-fluid {
+					max-inline-size: 100;
+					height: auto;
+					max-width: 100%;
+
+				}
+
+				.responsive {
+					padding: 0 20px;
+				}
+
+				.responsive img {
+					max-inline-size: 100%;
+					height: auto;
+					object-fit: cover;
+				}
+
+				.magazine-img {
+					width: 160px;
+					height: 170px;
+					border-radius: 4px;
+					display: block;
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
+				}
+
+				.magazine-img:hover {
+					transform: scale(1.05);
+					box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+				}
+
+
+			}
+		</style>
+
+	</head>
+
+<body>
+
+
+	</table>
+</body>
+
+</html>
+
+</head>
+
+<body>
+
+	<!-- Start of banner -->
+
+
+	<table align="center" width="100%" bgcolor="#e6e5e7" cellspacing="0" cellpadding="0" border="0"
+		style="table-layout:fixed; ">
+		<tbody background="body pattern.png">
+			<tr>
+				<td valign="top" align="center">
+					<table width="600" bgcolor="#ffffff" align="center" cellspacing="0" cellpadding="0" border="0"
+						class="mobile-width">
+						<tbody>
+							<td valign="top" bgcolor="#ffffff" align="center">
+								<!-- After Menu Start -->
+								<table width="600" align="center" cellspacing="0" cellpadding="0" border="0"
+									class="mobile-width">
+									<tbody>
+										<tr>
+											<td align="center">
+												<!-- Section 2 Start / Start Block Content -->
+												<table width="550" align="center" cellspacing="0" cellpadding="0"
+													border="0" class="content-width-menu">
+													<tbody>
+														<tr>
+															<td height="25" valign="middle">
+																<!-- Start Logo -->
+																<table width="100%" align="center" cellspacing="0"
+																	cellpadding="0" border="0" class="full-width">
+																	<tbody>
+																		<tr>
+																			<td height="30" valign="middle"
+																				align="center" class="center-stack"
+																				style="font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: bold;">
+																				<a href="#"
+																					style="color: #16a085; text-decoration: none;">
+																					<span
+																						style="font-size: 24px; font-weight: bold;">
+																						<img class="img-fluid"
+																							src="aabha.png"
+																							alt="Aabha Logo"
+																							style="height: 55px; width: auto; vertical-align: middle;">
+																					</span>
+																				</a>
+																			</td>
+																			<td height="20" valign="middle"
+																				align="right"
+																				style="font-family: 'Open Sans', sans-serif; padding-right: 10px;">
+
+																			</td>
+																		</tr>
+
+																	</tbody>
+																</table>
+																<!-- End Logo -->
+																<!-- Start Nav -->
+																<table align="right" cellspacing="0" cellpadding="0"
+																	border="0" class="content-width-menu">
+																	<tbody>
+
+																	</tbody>
+																</table>
+																<!-- End Nav -->
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table width="100%" cellspacing="0" cellpadding="0" border="0"
+													background="dae79348-7e8d-4787-8f15-873decb53a2f.png"
+													style="background-repeat: no-repeat; background-position: center center; background-size: cover; height: 100px;">
+													<tbody>
+
+														<tr>
+															<td align="center" style="height: 150px;">
+																<img class="img-fluid" src="img1.png" alt="Book Cover"
+																	style="max-width: 100%; height: auto; border: none; display: block;" />
+															</td>
+														</tr>
+														<td height="7"
+															style="font-size:10px; mso-line-height-rule:exactly; line-height:7px;">
+															&nbsp;</td>
+
+										</tr>
+									</tbody>
+								</table>
+
+								<!-- Section 2 End / End Block Content -->
+								<!-- Section Start -->
+								<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+									<tr>
+										<td align="center">
+											<!-- Container -->
+											<table width="500" bgcolor="#ffffff" align="center" cellspacing="0"
+												cellpadding="0" border="0" style="margin: 0 auto;">
+												<tr>
+													<!-- Image Column -->
+													<td width="230" align="center" valign="middle">
+														<img src="magazine.webp" alt="Magazine Cover" width="160"
+															height="170" style="display: block; border-radius: 4px; 
+													 class=" magazine-img" mc:edit="section7_img" mc:label="image">
+													</td>
+
+													<!-- Text Column -->
+													<td align="center" valign="middle"
+														style="padding-left: 20px; vertical-align: middle;">
+														<div
+															style="font-size: 15px; color: #2c3e50; font-weight: bold; font-family: 'Open Sans', sans-serif; line-height: 22px;">
+															<strong>संस्करण</strong><br>अप्रैल 2025
+														</div>
+
+														<div
+															style="margin-top: 7px; font-size: 22px; color: #2c3e50; font-weight: bold; font-family: 'Open Sans', sans-serif;">
+															"आजकल"
+														</div>
+
+														<!-- Button -->
+														<div style="margin-top: 7px;">
+															<a href="#" style="border: 1px solid #ba9357;
+                        border-radius: 4px;
+                        color: #ba9357;
+                        display: inline-block;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        font-weight: 800;
+                        line-height: 12px;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: 10px 20px;
+                        -webkit-text-size-adjust: none;">
+																READ NOW
+															</a>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+
+								<table width="100%" cellspacing="0" cellpadding="0" border="0" class="full-width">
+									<tbody>
+										<tr>
+											<td height="10"
+												style="font-size:40px; mso-line-height-rule:exactly; line-height:20px;">
+												&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<section class="latest-articles">
+									<h2
+										style="font-size: 24px; font-weight: bold; margin-bottom: 15px; color: #515a5a ">
+										नवीनतम लेख
+									</h2>
+
+
+
+									<div class="main-container">
+										<div class="article-card">
+											<img src="garden.jpg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading">
+
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+														fill="#3498db" class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+														<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+												<div class="card-title">2025 में स्मार्ट खेती की शुरुआत</div>
+												<div class="card-desc">29 मई 2025</div>
+											</div>
+										</div>
+
+										<div class="article-card">
+											<img src="digital.jpg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+														fill="#3498db" class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+														<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+												<div class="card-title">डिजिटल शिक्षा में भारत की नई पहल</div>
+												<div class="card-desc">24 मई 2025</div>
+											</div>
+										</div>
+
+										<div class="article-card">
+											<img src="doctor.jpg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading">
+													<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" /><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3498db"
+														class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+												<div class="card-title">टेलीमेडिसिन की पहुँच</div>
+												<div class="card-desc">22 मई 2025</div>
+											</div>
+										</div>
+
+
+										<div class="article-card">
+											<img src="isro.jpg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading">
+													<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" /><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3498db"
+														class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+												<div class="card-title">अंतरिक्ष में भारत की नई छलांग</div>
+												<div class="card-desc">20 मई 2025</div>
+											</div>
+										</div>
+
+
+										<div class="article-card">
+											<img src="hindi.jpeg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+														fill="#3498db" class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+														<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+												<div class="card-title">हिंदी पत्रकारिता: एक झलक</div>
+												<div class="card-desc">30 मई 2025</div>
+											</div>
+										</div>
+
+										<div class="article-card">
+											<img src="brain.jpeg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+														fill="#3498db" class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+														<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+												<div class="card-title">ब्रेन डेड व्यक्ति से 3 को नया जीवन</div>
+												<div class="card-desc">29 मई 2025</div>
+											</div>
+										</div>
+
+
+										<div class="article-card">
+											<img src="bio.jpg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+														fill="#3498db " class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+														<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+												<div class="card-title">बायोफ्यूल: नई ऊर्जा क्रांति</div>
+												<div class="card-desc">18 मई 2025</div>
+											</div>
+										</div>
+
+
+
+										<div class="article-card">
+											<img src="electric.jpg" alt="Article Image">
+											<div class="card-text">
+												<div class="top-heading"
+													style="display: flex; align-items: center; gap: 6px;">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+														fill="#3498db" class="bi bi-book-fill" viewBox="0 0 16 16">
+														<path
+															d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+														<path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 
+             1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 
+             3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 
+             0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 
+             3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 
+             0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 
+             8.985.936 8 1.783" />
+													</svg>
+													<span style="color: #3498db; font-weight: bold;">सामग्री</span>
+												</div>
+
+												<div class="card-title">इलेक्ट्रिक व्हीकल्स की बढ़ती मांग</div>
+												<div class="card-desc">05 मई 2025</div>
+											</div>
+										</div>
+									</div>
+								</section>
+
+
+
+								<table width="100%" cellspacing="0" cellpadding="0" border="0" class="full-width">
+									<tbody>
+										<tr>
+											<td height="10"
+												style="font-size:40px; mso-line-height-rule:exactly; line-height:20px;">
+												&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+
+
+
+
+								<table width="600" bgcolor="#999966" align="center" cellspacing="0" cellpadding="0"
+									border="0" class="mobile-width">
+									<tbody>
+										<tr>
+											<td align="center">
+												<!-- Start Block Content -->
+												<table width="600" background="footer pattern.png" align="center"
+													cellspacing="0" cellpadding="0" border="0" class="content-width">
+													<tbody>
+														<tr>
+															<td valign="top" td="" align="center">
+																<!-- Start Column 1 -->
+																<table align="center" cellspacing="0" cellpadding="0"
+																	border="0" class="full-width" width="100%">
+																	<tbody>
+
+																		<tr>
+																			<td height="20">&nbsp;
+																			</td>
+																		</tr>
+																		<tr>
+																			<td align="center" height="0"
+																				valign="middle"><img class="img-fluid"
+																					src="logo-white.png" alt="Logo"
+																					style="width: 150px; height: auto;">
+																			</td>
+																		</tr>
+																		<tr>
+																			<td height="20">&nbsp;
+																			</td>
+																		</tr>
+
+
+																		<tr>
+																			<td style="font-size:14px; height:20px; color:#ffffff; font-weight:normal; font-family: Open Sans, sans-serif;"
+																				align="center">संपर्क करें</td>
+																		</tr>
+																		<tr>
+																			<td style="font-family: Open Sans, sans-serif; font-size:20px;mso-line-height-rule:exactly; line-height:25px; font-weight:bold; color:#ffffff"
+																				align="center"><a
+																					href="tel:+91178016498"
+																					style="color:#ffffff; text-decoration:none;">+91
+																					1780 16498</a>
+																			</td>
+																		</tr>
+
+
+
+
+
+
+																		<tr>
+																			<td style="font-family: Open Sans, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:28px; font-weight:bold; color:#ffffff"
+																				align="center">
+																				<a href="mailto:info@aabhamagazine.in"
+																					style="color:#ffffff; text-decoration:none;">info@aabhamagazine.in</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td height="18">&nbsp;
+																			</td>
+																		</tr>
+																		<tr>
+																			<td style="font-size:12px; font-family: Open Sans, sans-serif; line-height:12px; color:#ffffff; font-weight:bold;"
+																				align="center">Aabha Magazine Pvt Ltd,
+																				#1135 Abul Fazal Enclave,
+																				Jamia Milia Islamia, Delhi 110 025</td>
+																		</tr>
+																		<tr>
+																			<td height="25">&nbsp;
+																			</td>
+																		</tr>
+
+
+																		<tr>
+																			<td align="center" height="20"
+																				valign="middle">
+																				&nbsp;</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<!-- End Column 1 -->
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<!-- End Block Content -->
+
+												<!-- Start Space -->
+												<table width="100%" bgcolor="#2c3e50" cellspacing="0" cellpadding="0"
+													border="0" class="full-width">
+													<tbody>
+														<tr>
+															<td height="28" align="center"
+																style="font-family: Open Sans, sans-serif;font-size:11px; font-weight:normal; color:#7f8c8d">
+																Copyright © 2025 Aabha Magazine <a href="#"
+																	style="color:#7f8c8d;"></a></td>
+														</tr>
+													</tbody>
+												</table>
+												<!-- End Space -->
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- End Space -->
+	</td>
+	</tr>
+	</tbody>
+	</table>
+	</td>
+	</tr>
+
+	</tbody>
+	</table>
+
+
+	<!-- Optional JavaScript; choose one of the two! -->
+
+	<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+	<script class="img-fluid" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script class="img-fluid" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6Sr3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script class="img-fluid" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script class="img-fluid" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script class="img-fluid" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+
+
+</body>
+
+</html>
